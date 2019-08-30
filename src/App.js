@@ -7,6 +7,16 @@ const Heading = styled.h1`
   font-size: 2rem;
 `;
 
+const Button = styled.button`
+  background: indigo;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  background: ${({ type }) => (type === 'cancel' ? 'tomato' : 'indigo')};
+`;
+
 function App() {
   return (
     <div className="App">
@@ -15,8 +25,10 @@ function App() {
         <Heading>
           Edit <code>src/App.js</code> and save to reload.
         </Heading>
+        <Button>Save</Button>
+        <Button type="cancel">Cancel</Button>
         <Heading>
-        Heading 2
+          Heading 2
         </Heading>
         <a
           className="App-link"
